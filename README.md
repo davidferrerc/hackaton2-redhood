@@ -20,6 +20,6 @@ Para esta edición necesitamos enriquecer el dashboard actual incluyendo informa
 
 1- Tráfico en tiempo real link
 2- Estado estaciones Bicicletas link
-3. Medición bicicletas link
+3- Medición bicicletas link
 
 Para esta edición necesitamos que presentéis una estimación de lo que costaría desarrollar la inclusión de estas tres fuentes de datos en base a los puntos anteriores, y que preparéis un POC en el que demostréis una parte de dicho desarrollo.
