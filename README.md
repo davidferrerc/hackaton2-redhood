@@ -18,8 +18,18 @@ Hypermobility desea abrir una ronda de RFP a diferentes empresas pero antes como
 ## Requerimiento
 Para esta edición necesitamos enriquecer el dashboard actual incluyendo información relativa a otras fuentes de datos:
 
-- Tráfico en tiempo real link
-- Estado estaciones Bicicletas link
-- Medición bicicletas link
+- Tráfico en tiempo real (http://apigobiernoabiertortod.valencia.es/apirtod/rest/datasets/estado_trafico.json)
+- Estado estaciones Bicicletas (http://mapas.valencia.es/lanzadera/opendata/aparcabicis/JSON)
+- Medición bicicletas (http://apigobiernoabiertortod.valencia.es/apirtod/rest/datasets/intensidad_espiras.json?items=8)
 
 Para esta edición necesitamos que presentéis una estimación de lo que costaría desarrollar la inclusión de estas tres fuentes de datos en base a los puntos anteriores, y que preparéis un POC en el que demostréis una parte de dicho desarrollo.
+
+## Elementos a entregar
+Los componentes del equipo tendrán que presentar los siguientes elementos como parte de la presentación:
+
++ Presentación: Harán una presentación de 30 min explicando su solución.
++ Diseño de Arquitectura: Diagrama que explique las diferentes piezas que han utilizado.
++ Justificación de piezas: Justificación de las decisiones que han llevado a elegir unas herramientas frente a otras.
++ Solución: Deberán entregar una máquina virtual, entorno web, donde se pueda ejecutar la solución
++ Origen de Datos: El equipo debe entregar una lista de los datasets explorados y razones por las que han sido incluidos o excluidos.
++ Modelos de Datos: Diseño del modelo, junto con los atributos de las mismas, definiciones etc.
