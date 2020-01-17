@@ -11,5 +11,5 @@ Hypermobility desea abrir una ronda de RFP a diferentes empresas pero antes como
 - Tiempo necesario para puesta en marcha
 - Coste de Mantenimiento
 
+https://github.com/davidferrerc/hackaton2-redhood/blob/master/img/Imagen1.png
 
-prueba
