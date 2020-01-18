@@ -33,21 +33,21 @@ class ConvertUTM(beam.DoFn):
        
         #{"empty_slots":17,"extra":{"address":"Economista Gay - Constituci\xc3\xb3n","banking":false,"bonus":false,"last_update":1578482815000,"slots":20,"status":"OPEN","uid":136},"free_bikes":3,"id":"1f6b81722ca23ce520f77207b868afa9","latitude":39.4899091610835,"longitude":-0.375701108044157,"name":"136_CALLE_ECONOMISTA_GAY","timestamp":"2020-01-08T11:34:20.782000Z"}'
        
-        item = json.loads(element) 
-        print(item)
-        coord = item['geometry.coordinates']
+        item = json.loads(element)
+        
+        coords = item['geometry']
         huso = 30
-        X = float(coord[0])
-        Y = float(coord[1])
+        X = float(coords[0])
+        Y = float(coords[1])
         lat,lon = utm.to_latlon(X, Y, huso, 'S')
 
-       
+        
         return [{'type':item['type'],
                  'plazas':item['properties.plazas'],
                  'tipo':item['properties.tipo'],
                  'id':item['properties.id'],
                  'typefeature':item['geometry.type'],
-                 'coordinates':str(lat)+","+str(lon)  
+                 'coordinates':str(lat)+","+str(lon)   
                  }]
 
 
