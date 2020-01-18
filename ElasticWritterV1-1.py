@@ -37,16 +37,17 @@ class ConvertUTM(beam.DoFn):
         
         coords = item['geometry']
         huso = 30
-        X = float(coords[0])
-        Y = float(coords[1])
+        X = coords['coordinates'][0]
+        Y = coords['coordinates'][1]
         lat,lon = utm.to_latlon(X, Y, huso, 'S')
-
         
+        properties=item['properties']
+                
         return [{'type':item['type'],
-                 'plazas':item['properties.plazas'],
-                 'tipo':item['properties.tipo'],
-                 'id':item['properties.id'],
-                 'typefeature':item['geometry.type'],
+                 'plazas':properties['plazas'],
+                 'tipo':properties['tipo'],
+                 'id':properties['id'],
+                 'typefeature':coords['type'],
                  'coordinates':str(lat)+","+str(lon)   
                  }]
 
