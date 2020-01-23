@@ -82,7 +82,7 @@ def run(argv=None, save_main_session=True):
    
   google_cloud_options = pipeline_options.view_as(GoogleCloudOptions)
   #3 Replace your hackathon-edem with your project id 
-  google_cloud_options.project = 'hackathon2-redhood'
+  google_cloud_options.project = 'hackaton2-redhood'
   google_cloud_options.job_name = 'myjob'
  
   # Uncomment below and add your bucket if you want to execute on Dataflow
@@ -103,12 +103,8 @@ def run(argv=None, save_main_session=True):
 
 
   # Read the pubsub messages into a PCollection.
-  biciStations, biciParking = p | beam.io.ReadFromPubSub(subscription=known_args.input_subscription)
+  biciStations = p | beam.io.ReadFromPubSub(subscription=known_args.input_subscription)
   
-  #biciParking = p | beam.io.ReadFromPubSub(subscription=known_args.input_subscription_park)
-  
-  print (biciParking)
-
   # Print messages received
  
   
